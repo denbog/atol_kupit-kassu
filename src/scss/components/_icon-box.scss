@@ -1,0 +1,19 @@
+.icon-box {
+    background: #fff;
+    border-radius: $border-radius;
+    box-shadow: 1.25px 1.25px 12.5px 0px rgba(0, 0, 0, 0.05);
+
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+        max-width: 40px;
+    }
+
+    & + & {
+        margin-top: 10px;
+    }
+}

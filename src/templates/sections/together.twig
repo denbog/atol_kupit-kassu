@@ -1,0 +1,16 @@
+<section>
+    <div class="container">
+        <h3>С кассами покупают</h3>
+
+        <div class="buy-together">
+            {% for item in together %}
+            <div class="card card--sm card--gray">
+                <img class="card__icon-right" src="{{ item.image }}" alt="{{ item.name }}">
+                <h4>{{ item.name }}</h4>
+                <p class="fs-big color-red">{{ item.price }}</p>
+                <a href="{{ item.url }}" target="_blank" class="btn btn--block">Купить</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

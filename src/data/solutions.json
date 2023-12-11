@@ -1,0 +1,40 @@
+{
+    "solutions": [
+        {
+            "name": "Касса с эквайрингом АТОЛ&nbsp;СТБ&nbsp;5",
+            "price": "от 17 500 ₽",
+            "image": "img/Group_4419.png",
+            "url": "#"
+        },
+        {
+            "name": "Смарт-терминал АТОЛ&nbsp;SIGMA&nbsp;8",
+            "price": "от 20 600 ₽",
+            "image": "img/image_144.png",
+            "url": "#"
+        },
+        {
+            "name": "Онлайн-касса АТОЛ&nbsp;27Ф",
+            "price": "от 45 300 ₽",
+            "image": "img/atol_27f_1_-PhotoRoom-1.png",
+            "url": "#"
+        },
+        {
+            "name": "Онлайн-касса АТОЛ 1Ф",
+            "price": "от 24 800 ₽",
+            "image": "img/image_146.png",
+            "url": "#"
+        },
+        {
+            "name": "Касса самообслуживания АТОЛ&nbsp;3210",
+            "price": "от 130 000 ₽",
+            "image": "imgimage_39.png",
+            "url": "#"
+        },
+        {
+            "name": "Онлайн-касса АТОЛ&nbsp;30Ф",
+            "price": "от 32 800 ₽",
+            "image": "img/DSC_1637_01-PhotoRoom-2.png",
+            "url": "#"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+@use 'sass-mq/mq';
+
+.point {
+    --point-size: 40px;
+    --point-inner-size: 24px;
+
+    background-color: rgba(193, 193, 193, 0.5);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: var(--point-size);
+    width: var(--point-size);
+
+    position: absolute;
+    z-index: 10;
+
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(var(--point-rotate, 0deg));
+
+    &::before {
+        content: "";
+
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+
+        display: block;
+
+        
+        animation: beat 1s infinite alternate;
+
+        height: var(--point-inner-size);
+        width: var(--point-inner-size);
+    }
+
+    &--line::after {
+        content: "";
+        background-color: var(--ponit-line-color, #C1C1C1);
+
+        display: block;
+        height: 1px;
+        width: var(--point-line-width, 275px);
+        
+        transform-origin: center;
+        position: absolute;
+        top: calc(var(--point-size) / 2);
+        left: calc(var(--point-size) / 2);
+        z-index: -1;
+    }
+
+    @include mq.mq(lg) {
+        &--sm {
+            --point-size: 15px;
+            --point-inner-size: 9px;
+        }
+    }
+}
+
+@keyframes beat{
+	to { transform: scale(1.1); }
+}

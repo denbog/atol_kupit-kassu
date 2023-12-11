@@ -1,0 +1,26 @@
+@use 'sass-mq/mq';
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+
+    &__tag {
+        background-color: var(--color-bg);
+        border-radius: var(--border-radius);
+
+        min-width: 300px;
+        padding: 10px 20px;
+        text-align: center;
+
+        @include mq.mq($until: md) { 
+            display: none;
+        }
+
+        .bg-light & {
+            background-color: var(--color-white);
+        }
+    }
+}

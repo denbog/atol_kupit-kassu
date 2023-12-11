@@ -1,0 +1,30 @@
+@use 'sass-mq/mq';
+
+.container {
+    --container-padding: 20px;
+
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+
+    @include mq.mq(md) {
+        --container-padding: 40px;
+    }
+
+    @include mq.mq(lg) {
+        --container-padding: 60px;
+    }
+
+    &--sm {
+        --container-padding: 0;
+
+        @include mq.mq(md) {
+            --container-padding: 20px;
+        }
+    }
+
+    & > & {
+        margin: 0 calc(-1 * var(--container-padding));
+    }
+}

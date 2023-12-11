@@ -1,0 +1,175 @@
+@use 'sass-mq/mq';
+
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    color: var(--color-black);
+
+    margin-bottom: var(--margin);
+    padding: 40px 20px;
+    position: relative;
+
+    &__icon-right {
+        display: block;
+        max-height: 76px;
+        margin-left: auto;
+        margin-bottom: var(--margin);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--sm {
+        padding: 20px;
+    }
+
+    &--md {
+        padding: 40px 25px;
+    }
+
+    &--lg {
+        padding: 40px;
+
+        @include mq.mq(lg) {
+            border-radius: var(--border-radius-big);
+        }
+    }
+
+    &--xl {
+        border-radius: var(--border-radius-big);
+        padding: 80px 40px;
+    }
+
+    &--gray {
+        background-color: var(--color-gray);
+    }
+
+    &--red {
+        background-color: var(--color-red);
+        color: var(--color-white);
+    }
+
+    &--media {
+        display: grid;
+        gap: 30px;
+
+        @include mq.mq($until: md) {
+            grid-template-rows: 144px 1fr;
+        }
+
+        @include mq.mq(md) {
+            align-items: center;
+            grid-template-columns: minmax(80px, 144px) 1fr;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-height: 100%;
+        }
+    }
+
+    &--room {
+        background-image: url(img/Rectangle-1401-PhotoRoom-1.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+
+        min-height: 415px;
+        padding-right: 50%;
+
+        @include mq.mq(xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &--food {
+        background-image: url(img/slices-of-veggies-and-fruits.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        min-height: 415px;
+        padding-right: 20%;
+
+        @include mq.mq(xl) {
+            margin-bottom: 0;
+        }
+    }
+
+    &--edu {
+        background-image: url(img/girl-being-home-schooled-while-on-quarantine-PhotoRoom-1.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+
+        min-height: 250px;
+        padding-right: 30%;
+    }
+
+    &--kassa {
+        @include mq.mq($until: lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            img {
+                margin: -30px 0 -40px;
+                max-height: 160px;
+            }
+        }
+
+        @include mq.mq(lg) {
+            display: flex;
+            flex-direction: column;
+            
+            img {
+                margin-top: auto;
+                margin-right: -20px;
+                margin-bottom: -100px;
+                margin-left: auto;
+                max-height: 350px;
+            }
+        }
+    }
+
+    &--map {
+        color: var(--color-white);
+        overflow: hidden;
+
+
+        background: var(--color-red);
+        background: linear-gradient(242.16deg, rgba(21, 20, 29, 0) 23.41%, rgba(21, 20, 29, 0.0946471) 50.94%, rgba(21, 20, 29, 0.2) 75.93%), linear-gradient(0deg, #ED1B2F, #ED1B2F);
+        border-radius: var(--border-radius-big);
+        padding: 80px 40px 40px;
+
+        & > * {
+            position: relative;
+        }
+
+        img {
+            margin-bottom: -20px;
+        }
+
+        &::before {
+            content: '';
+
+            background: url(img/Group_1.png) no-repeat;
+            background-position:  center bottom;
+            background-size: contain;
+
+            position: absolute;
+            inset: 0 40px 40px 40px;
+            z-index: 0;
+
+            @include mq.mq(md) {
+                inset: 0 40px 0 0;
+                background-size: 50%;
+                background-position: right center;
+            }
+        }
+    }
+
+    .d-flex > &  {
+        flex-basis: 100%;
+    }
+}

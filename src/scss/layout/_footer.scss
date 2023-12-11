@@ -1,0 +1,23 @@
+body > footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: .875em;
+    line-height: 1.285;
+    padding: 60px 0;
+
+    ul {
+        &:not(:last-child) {
+            margin-bottom: var(--block-margin);
+        }
+
+        li + li {
+            margin-top: 8px;
+        }
+    }
+
+    hr {
+        background: var(--color-white);
+        margin: 30px calc(-1 * var(--container-padding, 0));
+        width: calc(100% + (var(--container-padding, 0) * 2));
+    }
+}

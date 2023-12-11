@@ -1,0 +1,47 @@
+@use 'sass-mq/mq';
+
+.frontol-banner {
+    padding: 40px 40px 40px 20px;
+
+    @include mq.mq($until: lg) {
+        overflow: hidden;
+    }
+
+    &__grid {
+        margin-right: -20px;
+        margin-bottom: -30px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "a ."
+            "b i"
+            ". i"
+            "p i"
+            ". i";
+
+        @include mq.mq(lg) {
+            grid-template-areas: 
+                "a ."
+                "b i"
+                ". i"
+                "p i";
+        }
+
+
+        h3 {
+            grid-area: a;
+        }
+        .btn {
+            grid-area: b;
+        }
+        p {
+            grid-area: p;
+            margin: var(--margin) 0;
+        }
+        img {
+            grid-area: i;
+            margin: -20px 0 -90px;
+        }
+    }
+}

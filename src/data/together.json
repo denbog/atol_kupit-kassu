@@ -1,0 +1,34 @@
+{
+    "together": [
+        {
+            "name": "ПО Frontol 6",
+            "price": "от 7000 ₽",
+            "image": "img/Ellipse_76.png",
+            "url": "#"
+        },
+        {
+            "name": "ПО Frontol Selfie",
+            "price": "от 15 000 ₽",
+            "image": "img/Ellipse_77.png",
+            "url": "#"
+        },
+        {
+            "name": "ПО Frontol xPOS 3",
+            "price": "от 5000 ₽",
+            "image": "img/Ellipse_78.png",
+            "url": "#"
+        },
+        {
+            "name": "ПО Frontol Mark Unit",
+            "price": "от 6000 ₽",
+            "image": "img/Ellipse_79.png",
+            "url": "#"
+        },
+        {
+            "name": "Frontol Discount Unit",
+            "price": "от 2500 ₽",
+            "image": "img/Ellipse_80.png",
+            "url": "#"
+        }
+    ]
+}

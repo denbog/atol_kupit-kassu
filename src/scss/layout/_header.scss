@@ -1,0 +1,35 @@
+@use 'sass-mq/mq';
+
+body > header {
+    padding: 36px 0;
+    
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    &.is-fixed {
+        padding: 0;
+        position: fixed;
+        animation: slideup .5s;
+
+        .container {
+            background-color: var(--color-black);
+            border-bottom-right-radius: var(--border-radius-big);
+
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+@keyframes slideup {
+    0% {
+        top: -100%; 
+        opacity: 0;
+    }
+  
+    100% {
+        top: 0px; 
+        opacity: 1;
+    }
+}

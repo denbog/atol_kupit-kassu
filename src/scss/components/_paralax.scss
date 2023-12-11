@@ -1,0 +1,12 @@
+.paralax {
+    height: 668px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--bg-1 {
+        background-image: url(../img/Models_6.jpg);
+    }
+}

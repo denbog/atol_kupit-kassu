@@ -1,0 +1,16 @@
+@use 'sass-mq/mq';
+
+.question {
+    background-image: url(img/image_87.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding-top: 200px;
+    padding-bottom: 40px;
+
+    @include mq.mq(lg) { 
+        padding-top: 300px;
+        padding-bottom: 60px;
+    }
+}

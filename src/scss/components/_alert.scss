@@ -1,0 +1,14 @@
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: var(--margin);
+    border-radius: $border-radius;
+
+    &--success {
+        background: #d1e7dd;
+    }
+
+    &--error {
+        background: #f8d7da;
+    }
+}

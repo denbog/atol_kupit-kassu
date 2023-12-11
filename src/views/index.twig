@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучшие онлайн-кассы для малого бизнеса</title>
+    <meta name="description" content="Лучшие онлайн-кассы для малого бизнеса" />
+    <meta property="og:image" content="img/Frame_28_1.jpg" />
+</head>
+<body>
+    {% include "templates/partials/header.twig" %}
+
+    <main>
+        {% include "templates/sections/hero.twig" %}
+        {% include "templates/sections/suitable-for.twig" %}
+        {% include "templates/sections/solutions.twig" %}
+        {% include "templates/sections/together.twig" %}
+
+        <div class="container wrapper-bg-gray">
+            {% include "templates/sections/kassa.twig" %}
+            {% include "templates/sections/mistakes.twig" %}
+            {% include "templates/sections/connect.twig" %}
+            {% include "templates/sections/question.twig" %}
+        </div>
+    </main>
+
+    {% include "templates/partials/footer.twig" %}
+    
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

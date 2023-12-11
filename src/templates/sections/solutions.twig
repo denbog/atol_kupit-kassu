@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <h3>Решения АТОЛ для бизнеса</h3>
+
+        <div class="row">
+            {% for item in solutions %}
+            <div class="col-lg-4">
+                <div class="card card--gray">
+                    <h4>{{ item.name }}</h4>
+                    <p class="fs-big color-red">{{ item.price }}</p>
+                    <a href="{{ item.url }}" target="_blank" class="btn btn--block">Подробнее</a>
+                    <img src="{{ item.image }}" alt="{{ item.name }}">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

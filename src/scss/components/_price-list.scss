@@ -1,0 +1,114 @@
+@use 'sass-mq/mq';
+
+@mixin price-list-item {
+    border-radius: 25px;
+
+    min-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+
+    transition: color .5s;
+}
+
+.price-list {
+    $p: &;
+    $clr-bg: #E2E5EE;
+    $clr-result: #DF192C;
+
+    &-floated {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        z-index: 1;
+    }
+
+
+    &__ghost {
+        @include mq.mq(lg) {
+            min-height: 250px;
+        }
+    }
+
+    &__label {
+        @include price-list-item;
+
+        background-color: $clr-bg;
+        font-weight: 500;
+
+        &--hoverable:hover {
+            color: var(--color-white);
+        }
+    }
+    &__value {
+        @include price-list-item;
+
+        outline: 1px solid $clr-bg;
+
+        &:hover {
+            color: var(--color-red);
+        }
+    }
+    &__result {
+        @include price-list-item;
+
+        background-color: $clr-result;
+        color: var(--color-white);
+        font-weight: 500;
+
+        &-line {
+            @include price-list-item;
+
+            padding-left: 0
+            ;
+            color: var(--color-white);
+            font-weight: 500;
+
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 20px;
+                z-index: -1;
+                
+                background-color: $clr-result;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    &__img-group {
+        display: grid;
+        place-items: center;
+        gap: 15px;
+
+        margin: 25px 0;
+
+        grid-template-columns: repeat(6, 1fr);
+
+        &--2 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @include mq.mq($until: lg) { 
+        &__table {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            #{$p}__label {
+                border-radius: $border-radius;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            #{$p}__value, #{$p}__result {
+                border-radius: $border-radius;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}

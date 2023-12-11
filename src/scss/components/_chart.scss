@@ -1,0 +1,30 @@
+.chart {
+
+    &-img {
+        box-shadow: $box-shadow;
+        margin-bottom: var(--block-margin);
+    }
+
+    &-rect {
+        background: #F6F7FA;
+        border-radius: 2px;
+        height: 20px;
+        width: 20px;
+
+        &--2 {
+            background: #E2E5EE;
+        }
+        &--3 {
+            background: #C1C1C1;
+        }
+        &--4 {
+            background: #15141D;
+        }
+        &--5 {
+            background: #F9B3BA;
+        }
+        &--6 {
+            background: #DF192C;
+        }
+    }
+}

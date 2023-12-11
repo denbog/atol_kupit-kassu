@@ -1,0 +1,56 @@
+@use 'sass-mq/mq';
+
+.product {
+    $p: &;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "c ."
+        "c i"
+        ". i";
+
+    padding-top: 40px;
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        grid-area: c;
+    }
+    &__media {
+        grid-area: i;
+
+        display: flex;
+        align-items: flex-end;
+
+        transition: transform .5s;
+
+        @include mq.mq(lg) {
+            #{$p}--4210 & {
+                transform: scale(1.15);
+                transform-origin: bottom;
+            }
+        }
+    }
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__title {
+        color: var(--color-red);
+        margin-bottom: 0 !important;
+    }
+
+    &__price {
+        color: var(--color-red);
+        font-size: 20px;
+    }
+
+    &__info {
+        color: var(--color-gray);
+    }
+}

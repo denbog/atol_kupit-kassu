@@ -1,0 +1,26 @@
+{
+  "name": "atol_checkout",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.0.0",
+    "sass": "^1.69.3",
+    "scss-reset": "^1.4.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@drewbot/sass-flexbox-grid": "^2.0.7",
+    "baguettebox.js": "^1.11.1",
+    "flexboxgrid-sass": "^8.0.5",
+    "maska": "^2.1.10",
+    "sass-mq": "^6.0.0",
+    "taggd": "^4.0.0",
+    "tingle.js": "^0.16.0"
+  }
+}

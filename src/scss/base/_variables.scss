@@ -1,0 +1,19 @@
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+
+@use 'sass-mq/mq' with (
+    $breakpoints: $breakpoints
+);
+
+$gutter-width: 20px;
+
+
+$border-radius: 10px;
+$border-radius-big: 20px;
+$box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.1);

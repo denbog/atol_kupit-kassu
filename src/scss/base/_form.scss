@@ -1,0 +1,17 @@
+input[type="text"],
+input[type="email"] {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color:  var(--color-light);
+    font-size: .75em;
+
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    width: 100%;
+
+    &:user-invalid {
+        border-color: var(--color-red);
+    }
+}

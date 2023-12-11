@@ -1,0 +1,58 @@
+<section class="mistakes theme-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Распространенные ошибки при работе с маркировкой</h3>
+
+                <div class="row row--count">
+                    <div class="col-xs-12 col-md-6">
+                        <h4>Нет маркировки на товаре</h4>
+                        <p>Код наносится на изделие, этикетку или упаковку. Если маркировка утеряна, то нужно обязательно промаркировать товар заново</p>
+                        <p class="color-red">Штраф до 300 000 руб.</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h4>Товар промаркирован неправильно</h4>
+                        <p>К примеру, код плохо пропечатан или есть другие нарушения стандарта, которые мешают распознать код</p>
+                        <p class="color-red">Штраф до 300 000 руб.</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h4>Ошибки при приемке товара</h4>
+                        <p>Необходимо, чтобы коды на товарах совпадали с&nbsp;кодами маркировки на балансе организации</p>
+                        <p class="color-red">Штраф до 100 000 руб.</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h4>Нарушение правил мониторинга</h4>
+                        <p>Например, отсутствие регистрации, ошибки в документах, отсутствие отчетности, передача неверной информации</p>
+                        <p class="color-red">Штраф до 100 000 руб.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/atol-sm.png" alt="">
+                    <h3>Продаете маркированный товар?</h3>
+                    <p class="fs-big">Защитите бизнес от штрафов за&nbsp;неправильную работу с&nbsp;маркированным товаром с&nbsp;помощью касс АТОЛ</p>
+                </div>
+
+            </div>
+        </div>
+
+        <h3>Дополнительное оборудование для бизнеса</h3>
+
+        <div class="row">
+            {% for item in equipment %}
+            <div class="col-xs-12 col-sm-6 col-xl-4 d-flex">
+                <div class="card card--sm card--media">
+                    <img src="{{ item.image }}" alt="{{ item.name }}">
+
+                    <div class="card__content">
+                        <h4>{{ item.name }}</h4>
+                        <p class="fs-big color-red">{{ item.price }}</p>
+                        <a href="{{ item.url }}" target="_blank" class="btn btn--block mt-a">Купить</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

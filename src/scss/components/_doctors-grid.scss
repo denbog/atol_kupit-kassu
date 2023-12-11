@@ -1,0 +1,68 @@
+.doctors-grid {
+    --card-width: 100%;
+    --card-ratio: 1 / 1;
+
+    &__sizer {
+        width: var(--card-width);
+    }
+
+    @media (min-width: 768px) {
+        --card-width: 50%;
+    }
+
+    @media (min-width: 992px) {
+        --card-width: 33.333%;
+    }
+
+    &__card {
+        $p: &;
+
+        background-color: white;
+        cursor: pointer;
+    
+        aspect-ratio: var(--card-ratio);
+        float: left;
+        outline: 1px solid #006abb;;
+        position: relative;
+        width: var(--card-width);
+    
+        display: grid;
+        grid-template-columns: 100%;
+        place-items: center;
+    
+        @media (min-width: 992px) {
+            &--big {
+                --card-width: 66.666%;
+                --card-ratio: 2 / 1;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 105, 186, .5);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            margin: 0;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+
+            img {
+                transform: scale(0.85);
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.badge {
+    background-color: var(--color-white);
+    font-size: .85rem;
+
+    border-radius: 30px;
+    padding: 5px;
+
+    &--black {
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+
+    &--circle {
+        font-size: .65em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

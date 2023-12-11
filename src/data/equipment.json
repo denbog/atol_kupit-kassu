@@ -1,0 +1,40 @@
+{
+    "equipment": [
+        {
+            "name": "АТОЛ <br />Mark.Scan",
+            "price": "от 3500 ₽",
+            "image": "img/image_143.png",
+            "url": "#"
+        },
+        {
+            "name": "Дисплей покупателя <br />АТОЛ&nbsp;PD-2800",
+            "price": "от 7830 ₽",
+            "image": "img/image_144.png",
+            "url": "#"
+        },
+        {
+            "name": "АТОЛ <br />Impulse&nbsp;12",
+            "price": "от 4500 ₽",
+            "image": "img/image_145.png",
+            "url": "#"
+        },
+        {
+            "name": "Онлайн-касса <br />АТОЛ&nbsp;30Ф",
+            "price": "от 30 800 ₽",
+            "image": "img/image_146.png",
+            "url": "#"
+        },
+        {
+            "name": "Frontol <br />Mark&nbsp;Unit",
+            "price": "от 6000 ₽",
+            "image": "img/image_149.png",
+            "url": "#"
+        },
+        {
+            "name": "Принтер штрихкода <br />АТОЛ&nbsp;BP21",
+            "price": "от 10 350 ₽",
+            "image": "img/image_148.png",
+            "url": "#"
+        }
+    ]
+}

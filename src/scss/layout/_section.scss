@@ -1,0 +1,50 @@
+@use 'sass-mq/mq';
+
+section {
+    padding: var(--section-padding) 0;
+    position: relative;
+
+    &.section-hero {
+        padding-top: 0;
+
+        .container {
+            background-image: url(img/light_cafe_03_1.png);
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            border-bottom-right-radius: var(--border-radius-big);
+            
+            padding-top: 340px;
+            padding-bottom: 80px;
+        }
+
+        ul {
+            list-style: disc inside;
+            margin-bottom: var(--block-margin);
+
+            li + li {
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    &.mistakes {
+        padding: 0;
+
+        .container {
+            background-color: var(--color-black);
+            border-top-left-radius: var(--border-radius-big);
+            border-bottom-right-radius: var(--border-radius-big);
+
+            padding-top: var(--section-padding);
+            padding-bottom: 220px;
+        }
+
+        & + section {
+            margin-top: -120px;
+            padding: 0;
+        }
+    }
+}

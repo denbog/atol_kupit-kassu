@@ -1,0 +1,10 @@
+.buy-together {
+    display: grid;
+    gap: var(--margin);
+
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+
+    & > * {
+        margin-bottom: 0;
+    }
+}

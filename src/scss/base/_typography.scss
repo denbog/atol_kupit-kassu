@@ -1,0 +1,60 @@
+@use 'sass-mq/mq';
+
+h1 {
+    font-size: 40px;
+    font-size: clamp(1.5rem, 3vw, 46px);
+    font-weight: 500;
+    line-height: 1.25;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+h2, .h2 {
+    font-size: 40px;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: var(--margin);
+    }
+
+    @include mq.mq(lg) { 
+        font-size: clamp(30px, 3vw, 40px);
+    }
+}
+
+h3, .h3 {
+    font-size: 36px;
+    font-size: clamp(1.25rem, 3vw, 36px);
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: var(--margin);
+
+        @include mq.mq(lg) {
+            margin-bottom: 40px;
+        }
+
+        @include mq.mq(xl) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: var(--margin);
+    }
+}
+
+h5 {
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
