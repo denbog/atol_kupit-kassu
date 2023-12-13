@@ -5,7 +5,7 @@ body > header {
     
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 
     &.is-fixed {
         padding: 0;
@@ -13,7 +13,7 @@ body > header {
         animation: slideup .5s;
 
         .container {
-            background-color: var(--color-black);
+            background-color: rgba($color: #13141C, $alpha: 0.9);
             border-bottom-right-radius: var(--border-radius-big);
 
             padding-top: 12px;

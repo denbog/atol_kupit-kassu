@@ -4,37 +4,41 @@
             "name": "Касса с эквайрингом АТОЛ&nbsp;СТБ&nbsp;5",
             "price": "от 17 500 ₽",
             "image": "img/Group_4419.png",
-            "url": "#"
+            "url": "https://www.atol.ru/catalog/smart-terminal-atol-stb-5/"
         },
         {
             "name": "Смарт-терминал АТОЛ&nbsp;SIGMA&nbsp;8",
             "price": "от 20 600 ₽",
-            "image": "img/image_144.png",
-            "url": "#"
+            "image": "img/Group_4418.png",
+            "class": "product--img-sticky",
+            "url": "https://www.atol.ru/catalog/atol-sigma-8/"
         },
         {
-            "name": "Онлайн-касса АТОЛ&nbsp;27Ф",
-            "price": "от 45 300 ₽",
-            "image": "img/atol_27f_1_-PhotoRoom-1.png",
-            "url": "#"
+            "name": "Кассовое ПО Frontol&nbsp;6",
+            "price": "от 7 000 ₽",
+            "image": "img/Group_4441.png",
+            "class": "product--img-sticky",
+            "url": "https://www.atol.ru/catalog/frontol-6/"
         },
         {
-            "name": "Онлайн-касса АТОЛ 1Ф",
-            "price": "от 24 800 ₽",
-            "image": "img/image_146.png",
-            "url": "#"
+            "name": "Ньюджер АТОЛ&nbsp;91Ф",
+            "price": "от 20 600 ₽",
+            "image": "img/image_40.png",
+            "url": "https://www.atol.ru/catalog/atol-91f/"
         },
         {
             "name": "Касса самообслуживания АТОЛ&nbsp;3210",
             "price": "от 130 000 ₽",
-            "image": "imgimage_39.png",
-            "url": "#"
+            "image": "img/image_39.png",
+            "class": "product--img-sticky product--img-up",
+            "url": "https://www.atol.ru/catalog/atol-kso-3210/"
         },
         {
             "name": "Онлайн-касса АТОЛ&nbsp;30Ф",
             "price": "от 32 800 ₽",
             "image": "img/DSC_1637_01-PhotoRoom-2.png",
-            "url": "#"
+            "class": "product--img-sticky",
+            "url": "https://www.atol.ru/catalog/atol-30f/"
         }
     ]
 }

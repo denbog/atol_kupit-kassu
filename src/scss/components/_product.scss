@@ -3,54 +3,43 @@
 .product {
     $p: &;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-        "c ."
-        "c i"
-        ". i";
+    background-color: var(--color-gray);
+    background-image: url(../img/Group_4220.png);
+    background-size: cover;
+    border-radius: var(--border-radius);
+    color: var(--color-black);
 
-    padding-top: 40px;
+    margin-bottom: var(--margin);
+    padding: 40px 20px;
+    position: relative;
 
-    &__content {
-        position: relative;
-        z-index: 2;
+    display: flex;
+    flex-direction: column;
 
-        grid-area: c;
+    img {
+        margin-top: auto;
     }
-    &__media {
-        grid-area: i;
 
-        display: flex;
-        align-items: flex-end;
+    &--img-sticky {
+        img {
+            margin-bottom: -40px;
+            margin-right: -20px;
+            margin-left: auto;
+        }
+    }
+    &--img-up { 
+        img {
+            margin-top: -30px;
+        }
 
-        transition: transform .5s;
-
-        @include mq.mq(lg) {
-            #{$p}--4210 & {
-                transform: scale(1.15);
-                transform-origin: bottom;
+        @include mq.mq(1365px) { 
+            img {
+                margin-top: -100px;
             }
         }
     }
 
-    p {
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
-    
-    &__title {
-        color: var(--color-red);
-        margin-bottom: 0 !important;
-    }
-
-    &__price {
-        color: var(--color-red);
-        font-size: 20px;
-    }
-
-    &__info {
-        color: var(--color-gray);
+    .d-flex > &  {
+        flex-basis: 100%;
     }
 }

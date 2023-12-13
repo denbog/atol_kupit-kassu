@@ -1,0 +1,36 @@
+.social {
+
+    background-color: var(--color-white);
+    border-radius: 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    width: 40px;
+
+    transition: background-color 0.5s;
+
+    svg {
+        path {
+            transition: fill 0.5s;
+        }
+    }
+
+    &--tk {
+        svg {
+            margin-left: -5px;
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-red);
+
+        svg {
+            path {
+                fill: var(--color-white);
+            }
+        }
+    }
+}

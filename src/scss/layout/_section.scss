@@ -8,8 +8,8 @@ section {
         padding-top: 0;
 
         .container {
-            background-image: url(img/light_cafe_03_1.png);
-            background-position: center right;
+            background-image: url(../img/light_cafe_03_2.png);
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
 
@@ -35,11 +35,42 @@ section {
 
         .container {
             background-color: var(--color-black);
+
             border-top-left-radius: var(--border-radius-big);
             border-bottom-right-radius: var(--border-radius-big);
 
-            padding-top: var(--section-padding);
+            padding-top: calc(var(--section-padding) * 2);
             padding-bottom: 220px;
+
+            @include mq.mq(md) { 
+                background-image: url(../img/pattern_11.png);
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+
+            &::before {
+
+                position: absolute;
+                top: 300px;
+                right: 0;
+
+                background-image: url(../img/Frame_595.png);
+                background-repeat: no-repeat;
+                background-position: right top;
+                background-size: contain;
+
+                height: 379px;
+                width: 35%;
+
+                @include mq.mq(md) { 
+                    content: '';
+                }
+
+                @include mq.mq(xl) { 
+                    top: 340px;
+                    width: 50%;
+                }
+            }
         }
 
         & + section {

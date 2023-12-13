@@ -1,41 +1,42 @@
 <section class="mistakes theme-dark">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h3>Распространенные ошибки при работе с маркировкой</h3>
-
-                <div class="row row--count">
-                    <div class="col-xs-12 col-md-6">
-                        <h4>Нет маркировки на товаре</h4>
-                        <p>Код наносится на изделие, этикетку или упаковку. Если маркировка утеряна, то нужно обязательно промаркировать товар заново</p>
-                        <p class="color-red">Штраф до 300 000 руб.</p>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <h4>Товар промаркирован неправильно</h4>
-                        <p>К примеру, код плохо пропечатан или есть другие нарушения стандарта, которые мешают распознать код</p>
-                        <p class="color-red">Штраф до 300 000 руб.</p>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <h4>Ошибки при приемке товара</h4>
-                        <p>Необходимо, чтобы коды на товарах совпадали с&nbsp;кодами маркировки на балансе организации</p>
-                        <p class="color-red">Штраф до 100 000 руб.</p>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <h4>Нарушение правил мониторинга</h4>
-                        <p>Например, отсутствие регистрации, ошибки в документах, отсутствие отчетности, передача неверной информации</p>
-                        <p class="color-red">Штраф до 100 000 руб.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
+            <div class="col-xs-12 col-md-4 col-xl-6">
+                <div class="card card--lg mb-50 hide-md">
                     <img src="img/atol-sm.png" alt="">
-                    <h3>Продаете маркированный товар?</h3>
+                    <h3 class="mt-30">Продаете маркированный товар?</h3>
                     <p class="fs-big">Защитите бизнес от штрафов за&nbsp;неправильную работу с&nbsp;маркированным товаром с&nbsp;помощью касс АТОЛ</p>
                 </div>
+            </div>
+            <div class="col-xs-12 col-md-8 col-xl-6 first-md">
+                <h3>Распространенные ошибки при работе с маркировкой</h3>
 
+                <ol class="row row--count">
+                    <li class="col-xs-12 col-md-6">
+                        <h4>Нет маркировки <br class="show-lg" />на&nbsp;товаре</h4>
+                        <p>Код наносится на изделие, этикетку или упаковку. Если маркировка утеряна, то нужно обязательно промаркировать товар заново</p>
+                        <p class="color-red">Штраф до&nbsp;300&nbsp;000&nbsp;руб.</p>
+                    </li>
+                    <li class="col-xs-12 col-md-6">
+                        <h4>Товар промаркирован неправильно</h4>
+                        <p>К примеру, код плохо пропечатан или есть другие нарушения стандарта, которые мешают распознать код</p>
+                        <p class="color-red">Штраф до&nbsp;300&nbsp;000&nbsp;руб.</p>
+                    </li>
+                    <li class="col-xs-12 col-md-6">
+                        <h4>Ошибки при приемке <br class="show-lg" />товара</h4>
+                        <p>Необходимо, чтобы коды <br class="show-lg" />на&nbsp;товарах совпадали с&nbsp;кодами маркировки на балансе организации</p>
+                        <p class="color-red">Штраф до&nbsp;100&nbsp;000&nbsp;руб.</p>
+                    </li>
+                    <li class="col-xs-12 col-md-6">
+                        <h4>Нарушение правил мониторинга</h4>
+                        <p>Например, отсутствие регистрации, ошибки в документах, отсутствие отчетности, передача неверной информации</p>
+                        <p class="color-red">Штраф до&nbsp;100&nbsp;000&nbsp;руб.</p>
+                    </li>
+                </ol>
             </div>
         </div>
+
+        <div class="divider"></div>
 
         <h3>Дополнительное оборудование для бизнеса</h3>
 
@@ -48,11 +49,15 @@
                     <div class="card__content">
                         <h4>{{ item.name }}</h4>
                         <p class="fs-big color-red">{{ item.price }}</p>
-                        <a href="{{ item.url }}" target="_blank" class="btn btn--block mt-a">Купить</a>
+                        <a href="{{ item.url }}" target="_blank" class="btn btn--block mt-a covering-link">Подробнее</a>
                     </div>
                 </div>
             </div>
             {% endfor %}
         </div>
+
+        <p class="text-center mt-20">
+            <button class="btn js-open-form" type="button">Подберем решение</button>
+        </p>
     </div>
 </section>

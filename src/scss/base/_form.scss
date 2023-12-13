@@ -2,11 +2,11 @@ input[type="text"],
 input[type="email"] {
     background-color: transparent;
     border: 1px solid transparent;
-    border-bottom-color:  var(--color-light);
+    border-bottom-color:  var(--color-dark-gray);
     font-size: .75em;
 
     display: block;
-    padding: 10px 20px;
+    padding: 10px;
     margin-bottom: 10px;
 
     width: 100%;

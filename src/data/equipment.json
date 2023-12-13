@@ -4,37 +4,37 @@
             "name": "АТОЛ <br />Mark.Scan",
             "price": "от 3500 ₽",
             "image": "img/image_143.png",
-            "url": "#"
+            "url": "https://www.atol.ru/catalog/atol-mark-scan/"
         },
         {
             "name": "Дисплей покупателя <br />АТОЛ&nbsp;PD-2800",
             "price": "от 7830 ₽",
             "image": "img/image_144.png",
-            "url": "#"
+            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
         },
         {
             "name": "АТОЛ <br />Impulse&nbsp;12",
             "price": "от 4500 ₽",
             "image": "img/image_145.png",
-            "url": "#"
+            "url": "https://www.atol.ru/catalog/atol-impulse-12/"
         },
         {
-            "name": "Онлайн-касса <br />АТОЛ&nbsp;30Ф",
-            "price": "от 30 800 ₽",
-            "image": "img/image_146.png",
-            "url": "#"
+            "name": "Денежный ящик <br />АТОЛ&nbsp;SB-245",
+            "price": "от 2880 ₽",
+            "image": "img/sb_245-front.png",
+            "url": "https://www.atol.ru/catalog/denezhnyy-yashchik-atol-sb-245/"
         },
         {
-            "name": "Frontol <br />Mark&nbsp;Unit",
-            "price": "от 6000 ₽",
-            "image": "img/image_149.png",
-            "url": "#"
+            "name": "POS-терминал АТОЛ&nbsp;Jazz&nbsp;15&nbsp;Lite",
+            "price": "от 46 800 ₽",
+            "image": "img/DSC_2826_01.png",
+            "url": "https://www.atol.ru/catalog/pos-terminal-atol-jazz-15-lite/"
         },
         {
             "name": "Принтер штрихкода <br />АТОЛ&nbsp;BP21",
             "price": "от 10 350 ₽",
             "image": "img/image_148.png",
-            "url": "#"
+            "url": "https://www.atol.ru/catalog/printer-shtrikhkoda-atol-bp21/"
         }
     ]
 }

@@ -6,6 +6,7 @@
     --color-black: #13141C;
     --color-gray: #F5F5F5;
     --color-light: #D8DDEC;
+    --color-dark-gray: #C1C1C1;
     --color-white: #FFFFFF;
     --color-white-600: #979797;
 
@@ -15,7 +16,7 @@
     --margin: 20px;
     --block-margin: 40px;
 
-    --section-padding: 30px;
+    --section-padding: 40px;
 
     @include mq.mq(lg) { 
         --section-padding: 60px;
@@ -78,27 +79,14 @@ p {
             padding-bottom: 0;
         }
     }
-
-    /*section {
-        padding: 0;
-
-        &:first-of-type > .container {
-            border-top-right-radius: var(--border-radius-big);
-        }
-
-        &:last-of-type {
-            padding-bottom: var(--section-padding);
-        }
-    }
-
-    .container {
-        background-color: var(--color-gray);
-
-        padding-top: var(--section-padding);
-        padding-bottom: var(--section-padding);
-    }*/
 }
 
+.bg-callback {
+    background-image: url(../img/shutterstock_1423205477-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
 
@@ -135,11 +123,19 @@ p {
     white-space: nowrap;
 }
 
+@include mq.mq(md) { 
+    .text-right-md {
+        text-align: right;
+    }
+}
+
 .fs-xl {
     font-size: 1.875em;
+    font-size: clamp(1.25em, 3vw, 1.875em);
 }
 .fs-big {
     font-size: 1.25em;
+    font-size: clamp(1em, 3vw, 1.25em);
 }
 .fs-small {
     font-size: .875em;
@@ -151,20 +147,21 @@ p {
     font-weight: 800;
 }
 
-.mb-0 {
-    margin-bottom: 0px!important;
-}
-.mb-10 {
-    margin-bottom: 10px!important;
-}
-.mb-20 {
-    margin-bottom: 20px!important;
-}
-.mb-40 {
-    margin-bottom: 40px!important;
-}
-.mb-50 {
-    margin-bottom: 50px!important;
+@for $i from 0 through 5 {
+    .mt-#{$i*10} {
+        margin-top: #{$i*10}px!important;
+    }
+    .mb-#{$i*10} {
+        margin-bottom: #{$i*10}px!important;
+    }
+
+    @each $breakpoint, $i in $breakpoints { 
+        @include mq.mq($breakpoint) { 
+            .mb-#{$breakpoint}-#{$i*10} {
+                margin-bottom: #{$i*10}px!important;
+            }
+        }
+    }
 }
 
 @include mq.mq($until: sm) { 
@@ -212,23 +209,36 @@ p {
     }
 }
 
-
-
-
-.hover-up {
-    transition: transform .75s;
-
-    &:hover {
-        transform: translateY(-10px);
-    }
+.divider {
+    height: calc(var(--section-padding) * 2);
 }
 
-@include mq.mq(md) { 
-    .hover-scale {
-        transition: transform .75s;
+ol.row {
+    counter-reset: styledlist;
+    
+    li {
+        margin-bottom: 40px;
 
-        &:hover {
-            transform: scale(1.05);
+        &::before {
+            counter-increment: styledlist;
+            content: counter(styledlist);
+
+            background-color: var(--color-white);
+            border-radius: 25px;
+            color: var(--color-black);
+            font-size: 20px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: var(--margin);
+            height: 40px;
+            width: 40px;
+        }
+
+        @include mq.mq(lg) { 
+            padding-right: 40px;
         }
     }
 }

@@ -72,7 +72,7 @@
     }
 
     &--room {
-        background-image: url(img/Rectangle-1401-PhotoRoom-1.png);
+        background-image: url(../img/Rectangle-1401-PhotoRoom-1.png);
         background-position: right bottom;
         background-repeat: no-repeat;
 
@@ -85,7 +85,7 @@
     }
 
     &--food {
-        background-image: url(img/slices-of-veggies-and-fruits.png);
+        background-image: url(../img/slices-of-veggies-and-fruits.png);
         background-position: left top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -99,7 +99,7 @@
     }
 
     &--edu {
-        background-image: url(img/girl-being-home-schooled-while-on-quarantine-PhotoRoom-1.png);
+        background-image: url(../img/girl-being-home-schooled-while-on-quarantine-PhotoRoom-1.png);
         background-position: right bottom;
         background-repeat: no-repeat;
 
@@ -153,7 +153,7 @@
         &::before {
             content: '';
 
-            background: url(img/Group_1.png) no-repeat;
+            background: url(../img/Group_1.png) no-repeat;
             background-position:  center bottom;
             background-size: contain;
 
@@ -171,5 +171,14 @@
 
     .d-flex > &  {
         flex-basis: 100%;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+
+        li + li {
+            margin-top: 10px;
+        }
     }
 }

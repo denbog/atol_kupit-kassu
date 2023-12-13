@@ -23,7 +23,17 @@
     }
 
     &:hover {
+        --btn-bg-color: var(--color-black);
+    }
+        
+    .theme-dark &:hover {
+        --btn-bg-color: var(--color-white);
         --btn-color: var(--color-black);
+    }
+
+    .card &:hover {
+        --btn-bg-color: var(--color-black);
+        --btn-color: var(--color-white);
     }
 
     &--black {
@@ -33,5 +43,9 @@
     &--block {
         display: block;
         width: 100%;
+    }
+
+    &--sm {
+        padding: 10px 25px;
     }
 }

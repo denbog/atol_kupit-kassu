@@ -1,18 +1,22 @@
-<section>
+<section id="catalog">
     <div class="container">
         <h3>Решения АТОЛ для бизнеса</h3>
 
         <div class="row">
             {% for item in solutions %}
-            <div class="col-lg-4">
-                <div class="card card--gray">
+            <div class="col-xs-12 col-sm-6 col-lg-4 d-flex">
+                <div class="product {{ item.class }}">
                     <h4>{{ item.name }}</h4>
-                    <p class="fs-big color-red">{{ item.price }}</p>
-                    <a href="{{ item.url }}" target="_blank" class="btn btn--block">Подробнее</a>
+                    <p class="fs-big color-red mb-30">{{ item.price }}</p>
+                    <div><a href="{{ item.url }}" target="_blank" class="btn covering-link">Подробнее</a></div>
                     <img src="{{ item.image }}" alt="{{ item.name }}">
                 </div>
             </div>
             {% endfor %}
         </div>
+
+        <p class="text-center mt-20">
+            <button class="btn js-open-form" type="button">Подберем решение</button>
+        </p>
     </div>
 </section>
