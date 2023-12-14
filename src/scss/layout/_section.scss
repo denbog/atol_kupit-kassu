@@ -30,7 +30,7 @@ section {
         }
     }
     
-    &.mistakes {
+    &.bg-black {
         padding: 0;
 
         .container {
@@ -47,14 +47,23 @@ section {
                 background-repeat: no-repeat;
                 background-position: right top;
             }
+        }
 
+        & + section,
+        & + .wrapper-bg-gray {
+            margin-top: -120px;
+            padding: 0;
+        }
+    }
+
+    &.mistakes {
+        .container {
             &::before {
-
                 position: absolute;
                 top: 300px;
                 right: 0;
 
-                background-image: url(../img/Frame_595.png);
+                background-image: url(../img/Frame_4371.png);
                 background-repeat: no-repeat;
                 background-position: right top;
                 background-size: contain;
@@ -71,11 +80,6 @@ section {
                     width: 50%;
                 }
             }
-        }
-
-        & + section {
-            margin-top: -120px;
-            padding: 0;
         }
     }
 }

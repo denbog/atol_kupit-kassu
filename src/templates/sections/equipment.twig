@@ -1,0 +1,21 @@
+<section class="bg-black theme-dark">
+    <div class="container">
+        <h3>Дополнительное оборудование для бизнеса</h3>
+
+        <div class="row">
+            {% for item in equipment %}
+            <div class="col-xs-12 col-sm-6 col-xl-4 d-flex">
+                <div class="card card--sm card--media">
+                    <img src="{{ item.image }}" alt="{{ item.name }}">
+
+                    <div class="card__content">
+                        <h4>{{ item.name }}</h4>
+                        <p class="fs-big color-red">{{ item.price }}</p>
+                        <a href="{{ item.url }}" target="_blank" class="btn btn--block mt-a covering-link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -5,15 +5,18 @@
                 <h3 class="mb-20">Оставить заявку</h3>
                 <p>Оставьте свои контакты, и мы ответим в течение 24 ч</p>
                 
-                <div class="hide alert alert--success js-form-success">Ваше сообщение успено отправлено!</div>
+                <div class="hide alert alert--success js-form-success">Ваше сообщение успешно отправлено!</div>
                 
                 <form>
                     <div class="hide alert alert--error js-form-error">Пожалуйста, заполните все обязательные поля</div>
                     
+                    <input type="hidden" name="sid" value="ATOL_KUPIT_KASSU" />
                     <input type="text" name="name" required placeholder="Имя, фамилия" />
                     <input type="text" name="phone" required placeholder="Телефон" />
                     <input type="email" name="email" required placeholder="Email" />
-                    <input type="text" name="place" required placeholder="Регион" />
+                    <input type="text" name="city" autocomplete="chrome-off" required placeholder="Город" />
+                    <input type="hidden" name="place" />
+                    <textarea name="question" placeholder="Напишите, какие решения вам интересны и для каких задач. Наш официальный партнер свяжется с вами, предоставит консультацию и предложит выгодные варианты"></textarea>
 
                     <p><small>Нажимая на кнопку, вы соглашаетесь с политикой конфидециальности</small></p>
 

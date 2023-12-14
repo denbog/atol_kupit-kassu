@@ -1,12 +1,6 @@
 {
     "equipment": [
         {
-            "name": "АТОЛ <br />Mark.Scan",
-            "price": "от 3500 ₽",
-            "image": "img/image_143.png",
-            "url": "https://www.atol.ru/catalog/atol-mark-scan/"
-        },
-        {
             "name": "Дисплей покупателя <br />АТОЛ&nbsp;PD-2800",
             "price": "от 7830 ₽",
             "image": "img/image_144.png",
@@ -14,7 +8,7 @@
         },
         {
             "name": "АТОЛ <br />Impulse&nbsp;12",
-            "price": "от 4500 ₽",
+            "price": "от 4800 ₽",
             "image": "img/image_145.png",
             "url": "https://www.atol.ru/catalog/atol-impulse-12/"
         },
@@ -25,16 +19,22 @@
             "url": "https://www.atol.ru/catalog/denezhnyy-yashchik-atol-sb-245/"
         },
         {
+            "name": "Принтер штрихкода <br />АТОЛ&nbsp;BP21",
+            "price": "от 10 750 ₽",
+            "image": "img/image_148.png",
+            "url": "https://www.atol.ru/catalog/printer-shtrikhkoda-atol-bp21/"
+        },
+        {
             "name": "POS-терминал АТОЛ&nbsp;Jazz&nbsp;15&nbsp;Lite",
             "price": "от 46 800 ₽",
             "image": "img/DSC_2826_01.png",
             "url": "https://www.atol.ru/catalog/pos-terminal-atol-jazz-15-lite/"
         },
         {
-            "name": "Принтер штрихкода <br />АТОЛ&nbsp;BP21",
-            "price": "от 10 350 ₽",
-            "image": "img/image_148.png",
-            "url": "https://www.atol.ru/catalog/printer-shtrikhkoda-atol-bp21/"
+            "name": "Терминал сбора данных АТОЛ&nbsp;Smart.Lite",
+            "price": "от 37 000 ₽",
+            "image": "img/image_143.png",
+            "url": "https://www.atol.ru/catalog/terminal-sbora-dannykh-atol-smart-lite/"
         }
     ]
 }

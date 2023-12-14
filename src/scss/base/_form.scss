@@ -1,5 +1,6 @@
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+textarea {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom-color:  var(--color-dark-gray);
@@ -14,4 +15,8 @@ input[type="email"] {
     &:user-invalid {
         border-color: var(--color-red);
     }
+}
+
+textarea {
+    min-height: 100px;
 }

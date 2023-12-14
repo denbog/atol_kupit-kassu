@@ -1,11 +1,11 @@
-<section class="mistakes theme-dark">
+<section class="mistakes bg-black theme-dark">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-xl-6">
                 <div class="card card--lg mb-50 hide-md">
                     <img src="img/atol-sm.png" alt="">
                     <h3 class="mt-30">Продаете маркированный товар?</h3>
-                    <p class="fs-big">Защитите бизнес от штрафов за&nbsp;неправильную работу с&nbsp;маркированным товаром с&nbsp;помощью касс АТОЛ</p>
+                    <p class="fs-big">Кассы АТОЛ помогут защитить бизнес от&nbsp;штрафов за&nbsp;неправильную работу с&nbsp;маркировкой</p>
                 </div>
             </div>
             <div class="col-xs-12 col-md-8 col-xl-6 first-md">
@@ -35,29 +35,5 @@
                 </ol>
             </div>
         </div>
-
-        <div class="divider"></div>
-
-        <h3>Дополнительное оборудование для бизнеса</h3>
-
-        <div class="row">
-            {% for item in equipment %}
-            <div class="col-xs-12 col-sm-6 col-xl-4 d-flex">
-                <div class="card card--sm card--media">
-                    <img src="{{ item.image }}" alt="{{ item.name }}">
-
-                    <div class="card__content">
-                        <h4>{{ item.name }}</h4>
-                        <p class="fs-big color-red">{{ item.price }}</p>
-                        <a href="{{ item.url }}" target="_blank" class="btn btn--block mt-a covering-link">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <p class="text-center mt-20">
-            <button class="btn js-open-form" type="button">Подберем решение</button>
-        </p>
     </div>
 </section>
