@@ -4,6 +4,7 @@ import '@/scss/main.scss'
 import tingle from 'tingle.js'
 import { MaskInput } from "maska"
 import autoComplete from "@tarekraafat/autocomplete.js"
+import Cookies from 'js-cookie'
 
 const header = document.querySelector('header')
 
@@ -90,6 +91,7 @@ document.querySelector('#form-callback form').addEventListener('submit', async (
     const formData = new FormData(form)
 
     formData.set('question', (formData.get('question') ? formData.get('question')+"\n\n" : '')+"КУПИ КАССУ")
+    formData.set('clientid', Cookies.get('_ym_uid') || '')
 
     let response = await fetch('/bitrix/services/main/ajax.php?mode=ajax&c=atol:form.landing&action=submit', {
         method: 'POST',

@@ -19,6 +19,7 @@
     "@tarekraafat/autocomplete.js": "^10.2.7",
     "baguettebox.js": "^1.11.1",
     "flexboxgrid-sass": "^8.0.5",
+    "js-cookie": "^3.0.5",
     "maska": "^2.1.10",
     "sass-mq": "^6.0.0",
     "taggd": "^4.0.0",
