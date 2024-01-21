@@ -1,0 +1,27 @@
+@use 'sass-mq/mq';
+
+.mistakes {
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 180px;
+        right: calc(-1 * var(--container-padding));
+
+        background-image: url(../img/Frame_4371.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+
+        height: 379px;
+        width: 35%;
+
+        @include mq.mq(md) { 
+            content: '';
+        }
+
+        @include mq.mq(xl) { 
+            top: 220px;
+            width: 50%;
+        }
+    }
+}

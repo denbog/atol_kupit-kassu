@@ -2,9 +2,11 @@
 
 .btn {
     --btn-bg-color: var(--color-red);
+    --btn-border-color: var(--color-red);
     --btn-color: var(--color-white);
 
     background-color: var(--btn-bg-color);
+    border: 1px solid var(--btn-border-color);
     border-radius: 8px;
 
     color: var(--btn-color);
@@ -24,20 +26,36 @@
 
     &:hover {
         --btn-bg-color: var(--color-black);
+        --btn-border-color: var(--color-black);
     }
         
     .theme-dark &:hover {
         --btn-bg-color: var(--color-white);
+        --btn-border-color: var(--color-white);
         --btn-color: var(--color-black);
     }
 
     .card &:hover {
         --btn-bg-color: var(--color-black);
+        --btn-border-color: var(--color-black);
         --btn-color: var(--color-white);
     }
 
     &--black {
         --btn-bg-color: var(--color-black);
+        --btn-border-color: var(--color-black);
+    }
+
+    &--outline {
+        --btn-bg-color: transparent;
+        --btn-border-color: var(--color-red);
+        --btn-color: var(--color-red);
+
+        &:hover {
+            --btn-bg-color: var(--color-red)!important;
+            --btn-border-color: var(--color-red)!important;
+            --btn-color: var(--color-white)!important;
+        }
     }
 
     &--block {
@@ -47,5 +65,8 @@
 
     &--sm {
         padding: 10px 25px;
+    }
+    &--xs {
+        padding: 10px;
     }
 }

@@ -36,5 +36,31 @@
             "image": "img/image_143.png",
             "url": "https://www.atol.ru/catalog/terminal-sbora-dannykh-atol-smart-lite/"
         }
+    ],
+    "labeling": [
+        {
+            "name": "Сканер штрихкода АТОЛ&nbsp;SB 2108&nbsp;Plus",
+            "price": "от 3900 ₽",
+            "image": "img/image_154.png",
+            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
+        },
+        {
+            "name": "Терминал сбора данных АТОЛ Smart.Slim&nbsp;Plus",
+            "price": "от 35 400 ₽",
+            "image": "img/image_155.png",
+            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
+        },
+        {
+            "name": "Термотрансферный принтер этикеток АТОЛ&nbsp;TT42",
+            "price": "от 16 300 ₽",
+            "image": "img/image_156.png",
+            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
+        },
+        {
+            "name": "Смарт-терминал АТОЛ <br class='show-md' />SIGMA&nbsp;7",
+            "price": "от 19 500 ₽",
+            "image": "img/image_157.png",
+            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
+        }
     ]
 }

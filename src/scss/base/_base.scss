@@ -143,6 +143,9 @@ p {
 .fs-xsmall {
     font-size: .75em;
 }
+.fw-500 {
+    font-weight: 500;
+}
 .fw-800 {
     font-weight: 800;
 }
@@ -175,6 +178,9 @@ p {
     }
 }
 
+.mb-global {
+    margin-bottom: var(--margin);
+}
 .mt-a {
     margin-top: auto;
 }

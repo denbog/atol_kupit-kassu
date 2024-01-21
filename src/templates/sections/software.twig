@@ -1,0 +1,15 @@
+<h3>Программное обеспечение</h3>
+<div class="row">
+    {% for item in software %}
+    <div class="col-xs-12 col-sm-6 col-xl-3 d-flex">
+        <div class="card card--sm d-flex">
+            <div class="card__icon-right">
+                <img src="{{ item.image }}" alt="{{ item.name }}">
+            </div>
+            <h4>{{ item.name }}</h4>
+            <p class="fs-big color-red mt-a">{{ item.price }}</p>
+            <button class="btn btn--outline btn--block btn--sm covering-link js-open-form">Узнать подробнее</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>

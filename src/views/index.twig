@@ -18,7 +18,18 @@
 
         <div class="container wrapper-bg-gray">
             {% include "templates/sections/kassa.twig" %}
-            {% include "templates/sections/mistakes.twig" %}
+            <section class="bg-black theme-dark">
+                <div class="container">
+                    {% include "templates/sections/labeling.twig" %}
+                    <div class="divider"></div>
+                    {% include "templates/sections/labeling-equipment.twig" %}
+                    <div class="divider"></div>
+                    {% include "templates/sections/software.twig" %}
+                    <div class="divider"></div>
+                    {% include "templates/sections/mistakes.twig" %}
+                </div>
+            </section>
+            
             {% include "templates/sections/connect.twig" %}
             {% include "templates/sections/question.twig" %}
         </div>

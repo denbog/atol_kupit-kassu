@@ -1,6 +1,8 @@
 @use 'sass-mq/mq';
 
 .card {
+    $p: &;
+
     background-color: var(--color-white);
     border-radius: var(--border-radius);
     color: var(--color-black);
@@ -19,6 +21,18 @@
     &__content {
         display: flex;
         flex-direction: column;
+    }
+
+    &__buy {
+        @include mq.mq(md) {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 50%);
+
+            & > * {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &--sm {
@@ -49,6 +63,21 @@
     &--red {
         background-color: var(--color-red);
         color: var(--color-white);
+    }
+
+    &--equipment {
+        display: flex;
+        flex-direction: column;
+
+        #{$p}__media {
+            height: 135px;
+            margin-bottom: var(--margin);
+            text-align: center;
+
+            img {
+                max-height: 100%;
+            }
+        }
     }
 
     &--media {

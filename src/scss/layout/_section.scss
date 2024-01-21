@@ -55,31 +55,4 @@ section {
             padding: 0;
         }
     }
-
-    &.mistakes {
-        .container {
-            &::before {
-                position: absolute;
-                top: 300px;
-                right: 0;
-
-                background-image: url(../img/Frame_4371.png);
-                background-repeat: no-repeat;
-                background-position: right top;
-                background-size: contain;
-
-                height: 379px;
-                width: 35%;
-
-                @include mq.mq(md) { 
-                    content: '';
-                }
-
-                @include mq.mq(xl) { 
-                    top: 340px;
-                    width: 50%;
-                }
-            }
-        }
-    }
 }
