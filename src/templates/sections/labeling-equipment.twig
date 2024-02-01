@@ -1,16 +1,16 @@
 <h3>Оборудование для маркировки</h3>
 <div class="row">
-    {% for item in labeling %}
+    {% for key in labeling %}
     <div class="col-xs-12 col-sm-6 col-xl-3 d-flex">
         <div class="card card--sm card--equipment">
             <div class="card__media">
-                <img src="{{ item.image }}" alt="{{ item.name }}">
+                <img src="{{ catalog[key].image }}" alt="">
             </div>
 
-            <p class="fw-500">{{ item.name }}</p>
+            <p class="fw-500">{{ catalog[key].name }}</p>
             <div class="card__buy mt-a">
-                <p class="color-red">{{ item.price }}</p>
-                <button class="btn btn--outline btn--block btn--xs covering-link js-open-form">Подробнее</button>
+                <p class="color-red">{{ catalog[key].price }}</p>
+                <a href="#product-{{ key }}" class="btn btn--outline btn--block btn--xs covering-link js-product">Подробнее</a>
             </div>
         </div>
     </div>

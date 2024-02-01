@@ -1,17 +1,21 @@
-<section class="bg-black theme-dark">
+<section>
     <div class="container">
-        <h3>Дополнительное оборудование для бизнеса</h3>
+        <h3>Дополнительное <br class="show-md" />оборудование для бизнеса</h3>
 
         <div class="row">
-            {% for item in equipment %}
-            <div class="col-xs-12 col-sm-6 col-xl-4 d-flex">
-                <div class="card card--sm card--media">
-                    <img src="{{ item.image }}" alt="{{ item.name }}">
+            {% for key in equipment %}
+            <div class="col-xs-12 col-sm-6 col-xl-3 d-flex">
+                <div class="card card--product">
+                    <div class="card__media">
+                        <img src="{{ catalog[key].image }}" alt="">
+                    </div>
 
-                    <div class="card__content">
-                        <h4>{{ item.name }}</h4>
-                        <p class="fs-big color-red">{{ item.price }}</p>
-                        <button class="btn btn--block mt-a covering-link js-open-form">Купить</button>
+                    <p class="card__title">{{ catalog[key].name }}</h4>
+                    <p class="card__text">{{ catalog[key].text }}</p>
+                    
+                    <div class="card__buy mt-a">
+                        <p class="color-red">{{ catalog[key].price }}</p>
+                        <a href="#product-{{ key }}" class="btn btn--outline btn--block btn--xs covering-link js-product">Подробнее</a>
                     </div>
                 </div>
             </div>

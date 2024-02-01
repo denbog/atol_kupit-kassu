@@ -1,18 +1,17 @@
 import '@/scss/main.scss'
 //import '@tarekraafat/autocomplete.js/dist/css/autoComplete.css'
 
+import Tabby from 'tabbyjs'
 import tingle from 'tingle.js'
 import { MaskInput } from "maska"
 import autoComplete from "@tarekraafat/autocomplete.js"
 import Cookies from 'js-cookie'
 
-const header = document.querySelector('header')
-
-document.addEventListener("scroll", (event) => {
-    header.classList.toggle('is-fixed', window.scrollY > 300)
-})
-
 new MaskInput('input[name="phone"]', { mask: "+7 (###) ###-##-##" })
+
+if (document.querySelector('[data-tabs]')) {
+    new Tabby('[data-tabs]')
+}
 
 const autoCompleteJS = new autoComplete({
     selector: 'input[name="city"]',
@@ -24,14 +23,14 @@ const autoCompleteJS = new autoComplete({
             try {
                 const resp = await fetch('https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address', {
                     method: 'post',
-                    headers: { 
+                    headers: {
                         'Content-Type': 'application/json',
                         'Authorization': 'Token 4808f665f589bfae7380e2f522dff85fe8d80ef3'
                     },
                     body: JSON.stringify({
                         query: query,
                         from_bound: { value: "city" },
-                        to_bound: { value: "city" }  
+                        to_bound: { value: "city" }
                     })
                 })
 
@@ -62,25 +61,106 @@ autoCompleteJS.input.addEventListener('selection', function (event) {
     document.querySelector('input[name="place"]').value = selection.data.region_with_type || ''
 })
 
-let formModal;
-document.querySelectorAll('.js-open-form').forEach((el) => {
+let formModal
+let productModal
+let productSelected = ''
+
+
+const openForm = () => {
+    if (!formModal) {
+        formModal = new tingle.modal({
+            closeMethods: ['overlay', 'button', 'escape'],
+            closeLabel: "Закрыть",
+            cssClass: ['tingle-popup'],
+            onClose: function () {
+                formModal.close();
+            }
+        })
+
+        formModal.setContent(document.getElementById('form-callback'))
+    }
+    if (productModal) {
+        productModal.close()
+    }
+
+    formModal.open()
+}
+
+const closest = (function () {
+    const el = HTMLElement.prototype,
+        matches =
+            el.matches ||
+            el.webkitMatchesSelector ||
+            el.mozMatchesSelector ||
+            el.msMatchesSelector;
+
+    return function closest(el, selector) {
+        return matches.call(el, selector)
+            ? el
+            : el.parentElement
+                ? closest(el.parentElement, selector)
+                : null;
+    };
+})();
+
+const live = function (selector, eventType, callback, context) {
+    (context || document).addEventListener(eventType, function (event) {
+        const listener = closest(event.target, selector);
+
+        if (listener) {
+            callback.call(listener, event);
+        }
+    });
+};
+
+live('.js-open-form', 'click', (event) => {
+    event.preventDefault()
+
+    openForm()
+})
+
+document.querySelectorAll('.js-buy-set').forEach((el) => {
     el.addEventListener('click', (event) => {
         event.preventDefault()
 
-        if (!formModal) {
-            formModal = new tingle.modal({
-                closeMethods: ['overlay', 'button', 'escape'],
-                closeLabel: "Закрыть",
-                cssClass: ['tingle-popup'],
-                onClose: function () {
-                    formModal.close();
-                }
-            })
+        let products = []
 
-            formModal.setContent(document.getElementById('form-callback'))
-        }
+        closest(el, '.row').querySelectorAll('[data-key]').forEach((item) => {
+            const id = 'product-'+item.getAttribute('data-key')
+            const tpl = document.getElementById(id)
 
-        formModal.open()
+            products.push(tpl.getAttribute('data-name'))
+        })
+
+        productSelected = products.join(", ")
+        openForm()
+    })
+})
+
+document.querySelectorAll('.js-product').forEach((el) => {
+    el.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        const tpl = document.querySelector(event.currentTarget.getAttribute('href'))
+        const className = 'tingle-' + tpl.getAttribute('data-type')
+
+        productSelected = tpl.getAttribute('data-name')
+
+        productModal = new tingle.modal({
+            closeMethods: ['overlay', 'button', 'escape'],
+            closeLabel: "Закрыть",
+            cssClass: [className],
+            onOpen: function () {
+                setTimeout(() => productModal.checkOverflow(), 500)
+            },
+            onClose: function () {
+                productModal.destroy()
+                productModal = null
+            }
+        })
+
+        productModal.setContent(tpl.content.cloneNode(true))
+        productModal.open()
     })
 })
 
@@ -90,17 +170,18 @@ document.querySelector('#form-callback form').addEventListener('submit', async (
     const form = event.currentTarget
     const formData = new FormData(form)
 
-    formData.set('question', (formData.get('question') ? formData.get('question')+"\n\n" : '')+"КУПИ КАССУ")
+    formData.set('question', (formData.get('question') ? formData.get('question') + "\n\n" : '') + "КУПИ КАССУ")
+    formData.set('product', productSelected)
     formData.set('clientid', Cookies.get('_ym_uid') || '')
 
     let response = await fetch('/bitrix/services/main/ajax.php?mode=ajax&c=atol:form.landing&action=submit', {
         method: 'POST',
-		headers: {
-			"X-Bitrix-Csrf-Token": window.csrfToken || ''
-		},
+        headers: {
+            "X-Bitrix-Csrf-Token": window.csrfToken || ''
+        },
         body: formData
     });
-  
+
     let result = await response.json()
 
     if ('error' == result.status) {

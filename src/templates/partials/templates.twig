@@ -1,0 +1,47 @@
+{% for key, item in catalog %}
+<template id="product-{{ key }}" data-name="{{ item.name_full }}" data-type="{{ (key starts with 'sw-') ? 'software' : 'product' }}">
+    <div class="product-full">
+        {% if key starts with 'sw-' %}
+        <div class="row">
+            <div class="col-xs-12 col-lg-2">
+                <img class="mb-20" src="{{ item.image }}" alt="">
+            </div>
+            <div class="col-xs-12 col-lg-10 first-lg product-full__content">
+                <h3>{{ item.name_full }}</h3>
+
+                <div class="fs-big">
+                    {{ item.text }}
+                </div>
+
+                <p class="fs-lg color-red product-full__price">{{ item.price_full ? item.price_full : item.price }}</p>
+
+                <p class="fs-big">Чтобы получить подробную информацию о&nbsp;ПО, совместимом с&nbsp;ним оборудовании, а&nbsp;также способах приобретения и активации, оставьте заявку на&nbsp;консультацию. Наш партнер свяжется с&nbsp;вами в&nbsp;течение&nbsp;24&nbsp;часов.</p>
+
+                <button type="button" class="btn js-open-form">Оставить заявку</button>
+            </div>
+        </div>
+        {% else %}
+        <div class="row middle-lg">
+            <div class="col-xs-12 col-lg-7 col-xl-6">
+                <div class="product-full__media">
+                    <img src="{{ item.image_big }}" alt="">
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-5 col-xl-6 first-lg product-full__content">
+                <h3><span class="color-red">{{ item.name_full }}</span> &ndash; {{ item.description }}</h3>
+
+                <ul class="product-full__info">
+                    {% for info in item.info %}
+                        <li class="fs-big">{{ info }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p class="fs-lg color-red">{{ item.price }}</p>
+
+                <button type="button" class="btn js-open-form">Заказать товар</button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</template>
+{% endfor %}

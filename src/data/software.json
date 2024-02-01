@@ -1,28 +1,8 @@
 {
     "software": [
-        {
-            "name": "АТОЛ Mark.Scan",
-            "price": "от 5000 ₽",
-            "image": "img/software_2.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        },
-        {
-            "name": "ПО Frontol xPOS 3",
-            "price": "от 5000 ₽",
-            "image": "img/software_1.png",
-            "url": "https://www.atol.ru/catalog/atol-impulse-12/"
-        },
-        {
-            "name": "ПО Frontol 6",
-            "price": "от 3000 ₽",
-            "image": "img/software_3.png",
-            "url": "https://www.atol.ru/catalog/denezhnyy-yashchik-atol-sb-245/"
-        },
-        {
-            "name": "Модуль &laquo;Маркировка&raquo;",
-            "price": "от 3000 ₽/год",
-            "image": "img/software_4.png",
-            "url": "https://www.atol.ru/catalog/printer-shtrikhkoda-atol-bp21/"
-        }
+        "sw-markskan",
+        "sw-xpos3",
+        "sw-frontol6",
+        "sw-sigma"
     ]
 }

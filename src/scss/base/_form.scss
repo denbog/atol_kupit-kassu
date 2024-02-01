@@ -19,4 +19,8 @@ textarea {
 
 textarea {
     min-height: 100px;
+
+    &::placeholder {
+        color: var(--color-dark-gray);
+    }
 }

@@ -4,7 +4,9 @@
     --color-red: #ED1B2F;
     --color-red-2: #DF192C;
     --color-black: #13141C;
+    --color-black-2: #15141D;
     --color-gray: #F5F5F5;
+    --color-gray-2: #F9F9F9;
     --color-light: #D8DDEC;
     --color-dark-gray: #C1C1C1;
     --color-white: #FFFFFF;
@@ -87,6 +89,17 @@ p {
     background-position: center;
     background-size: cover;
 }
+.bg-red {
+    background-color: var(--color-red);
+
+    background-image: url(../img/Group_4504.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    border-radius: var(--border-radius);
+
+    padding: 40px 20px;
+}
 
 
 
@@ -133,6 +146,10 @@ p {
     font-size: 1.875em;
     font-size: clamp(1.25em, 3vw, 1.875em);
 }
+.fs-lg {
+    font-size: 1.625em;
+    font-size: clamp(1.15em, 3vw, 1.625em);
+}
 .fs-big {
     font-size: 1.25em;
     font-size: clamp(1em, 3vw, 1.25em);
@@ -177,9 +194,29 @@ p {
         margin-bottom: 20px!important;
     }
 }
+@include mq.mq($until: lg) { 
+    .mb-lg-20 {
+        margin-bottom: 20px!important;
+    }
+}
+@include mq.mq($until: xl) { 
+    .mb-xl-20 {
+        margin-bottom: 20px!important;
+    }
+}
 
 .mb-global {
-    margin-bottom: var(--margin);
+    &:not(:last-child) {
+        margin-bottom: var(--margin);
+
+        @include mq.mq(lg) {
+            margin-bottom: 40px;
+        }
+
+        @include mq.mq(xl) {
+            margin-bottom: 60px;
+        }
+    }
 }
 .mt-a {
     margin-top: auto;

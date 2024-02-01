@@ -13,9 +13,12 @@
 
     &__icon-right {
         display: block;
-        max-height: 76px;
         margin-left: auto;
         margin-bottom: var(--margin);
+
+        img {
+            max-height: 76px;
+        }
     }
 
     &__content {
@@ -76,6 +79,82 @@
 
             img {
                 max-height: 100%;
+            }
+        }
+    }
+
+    &--product {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        #{$p}__media {
+            background-color: var(--color-gray-2);
+            border-radius: var(--border-radius);
+            height: 220px;
+            margin-bottom: var(--margin);
+            text-align: center;
+
+            img {
+                max-height: 100%;
+            }
+
+            &-badge {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+        #{$p}__title {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        #{$p}__text {
+            color: #15141D99;
+            font-size: 12px;
+        }
+    }
+
+    &--discount {
+        background-color: var(--color-black);
+        color: var(--color-white);
+
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        #{$p}__price {
+            background-color: var(--color-white);
+            border-radius: 10px;
+            color: var(--color-red);
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        &::before {
+            content: '';
+
+            background-image: url(../img/discount.svg);
+            background-size: contain;
+            height: 100px;
+            width: 92px;
+
+            position: absolute;
+            right: -20px;
+            top: -15px;
+
+            @include mq.mq(md) {
+                height: 160px;
+                width: 140px;
+
+                right: -30px;
+                top: -25px;
+            }
+            @include mq.mq(xl) {
+                right: -40px;
+                top: -35px;
             }
         }
     }

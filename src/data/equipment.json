@@ -1,66 +1,14 @@
 {
     "equipment": [
-        {
-            "name": "Дисплей покупателя <br />АТОЛ&nbsp;PD-2800",
-            "price": "от 7830 ₽",
-            "image": "img/image_144.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        },
-        {
-            "name": "АТОЛ <br />Impulse&nbsp;12",
-            "price": "от 4800 ₽",
-            "image": "img/image_145.png",
-            "url": "https://www.atol.ru/catalog/atol-impulse-12/"
-        },
-        {
-            "name": "Денежный ящик <br />АТОЛ&nbsp;SB-245",
-            "price": "от 2880 ₽",
-            "image": "img/sb_245-front.png",
-            "url": "https://www.atol.ru/catalog/denezhnyy-yashchik-atol-sb-245/"
-        },
-        {
-            "name": "Принтер штрихкода <br />АТОЛ&nbsp;BP21",
-            "price": "от 10 750 ₽",
-            "image": "img/image_148.png",
-            "url": "https://www.atol.ru/catalog/printer-shtrikhkoda-atol-bp21/"
-        },
-        {
-            "name": "POS-терминал АТОЛ&nbsp;Jazz&nbsp;15&nbsp;Lite",
-            "price": "от 46 800 ₽",
-            "image": "img/DSC_2826_01.png",
-            "url": "https://www.atol.ru/catalog/pos-terminal-atol-jazz-15-lite/"
-        },
-        {
-            "name": "Терминал сбора данных АТОЛ&nbsp;Smart.Lite",
-            "price": "от 37 000 ₽",
-            "image": "img/image_143.png",
-            "url": "https://www.atol.ru/catalog/terminal-sbora-dannykh-atol-smart-lite/"
-        }
+        "pt-5",
+        "kso-3210",
+        "pd-7000",
+        "22v2"
     ],
     "labeling": [
-        {
-            "name": "Сканер штрихкода АТОЛ&nbsp;SB 2108&nbsp;Plus",
-            "price": "от 3900 ₽",
-            "image": "img/image_154.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        },
-        {
-            "name": "Терминал сбора данных АТОЛ Smart.Slim&nbsp;Plus",
-            "price": "от 35 400 ₽",
-            "image": "img/image_155.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        },
-        {
-            "name": "Термотрансферный принтер этикеток АТОЛ&nbsp;TT42",
-            "price": "от 16 300 ₽",
-            "image": "img/image_156.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        },
-        {
-            "name": "Смарт-терминал АТОЛ <br class='show-md' />SIGMA&nbsp;7",
-            "price": "от 19 500 ₽",
-            "image": "img/image_157.png",
-            "url": "https://www.atol.ru/catalog/displey-pokupatelya-atol-pd-2800/"
-        }
+        "sb-2108-plus",
+        "smart-slim",
+        "smart-slim-plus",
+        "tt42"
     ]
 }

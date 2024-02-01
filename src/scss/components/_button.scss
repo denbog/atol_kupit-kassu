@@ -28,17 +28,17 @@
         --btn-bg-color: var(--color-black);
         --btn-border-color: var(--color-black);
     }
-        
-    .theme-dark &:hover {
-        --btn-bg-color: var(--color-white);
-        --btn-border-color: var(--color-white);
-        --btn-color: var(--color-black);
-    }
 
     .card &:hover {
         --btn-bg-color: var(--color-black);
         --btn-border-color: var(--color-black);
         --btn-color: var(--color-white);
+    }
+        
+    .theme-dark &:hover {
+        --btn-bg-color: var(--color-white);
+        --btn-border-color: var(--color-white);
+        --btn-color: var(--color-black);
     }
 
     &--black {

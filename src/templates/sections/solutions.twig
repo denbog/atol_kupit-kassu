@@ -2,21 +2,51 @@
     <div class="container">
         <h3>Решения АТОЛ для бизнеса</h3>
 
-        <div class="row">
-            {% for item in solutions %}
-            <div class="col-xs-12 col-sm-6 col-lg-4 d-flex">
-                <div class="product {{ item.class }}">
-                    <h4>{{ item.name }}</h4>
-                    <p class="fs-big color-red mb-30">{{ item.price }}</p>
-                    <div><button class="btn covering-link js-open-form">Купить</button></div>
-                    <img src="{{ item.image }}" alt="{{ item.name }}">
+        <ul data-tabs class="mb-global">
+            <li><a href="#catalog-retail" data-tabby-default>Розничная торговля</a></li>
+            <li><a href="#catalog-services">Услуги</a></li>
+            <li><a href="#catalog-horeca">HoReCa</a></li>
+        </ul>
+
+        {% for name in ["retail", "services", "horeca"] %}
+        <div id="catalog-{{ name }}">
+            {% include "../catalog/" ~ name ~ ".twig" %}
+
+            <div class="row">
+                {% for key in solutions[name].list %}
+                <div class="col-xs-12 col-sm-6 col-xl-3 d-flex">
+                    <div class="card card--product" data-key="{{ key }}">
+                        <div class="card__media">
+                            <img src="{{ catalog[key].image }}" alt="">
+                            {% if catalog[key].badge %}
+                                <img class="card__media-badge" src="{{ catalog[key].badge }}" alt="">
+                            {% endif %}
+                        </div>
+    
+                        <p class="card__title">{{ catalog[key].name }}</h4>
+                        <p class="card__text">{{ catalog[key].text }}</p>
+                        
+                        <div class="card__buy mt-a">
+                            <p class="color-red">{{ catalog[key].price }}</p>
+                            <a href="#product-{{ key }}" class="btn btn--outline btn--block btn--xs covering-link js-product">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="col-xs-12 col-sm-6 col-xl-3 d-flex">
+                    <div class="card card--discount theme-dark">
+                        <p class="mt-a">
+                            <span class="card__price">{{ solutions[name].total }}</span>
+                        </p>
+                        
+                        <p class="fs-lg">Закажите весь комплект или подберите выгодное решение для вашего бизнеса</p>
+                        <button type="button" class="btn btn--block covering-link js-buy-set">Оставить заявку</button>
+                    </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
 
-        <p class="text-center mt-20">
-            <button class="btn js-open-form" type="button">Подберем решение</button>
-        </p>
     </div>
 </section>

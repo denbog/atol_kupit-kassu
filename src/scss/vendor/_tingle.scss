@@ -31,21 +31,66 @@
             margin-left: -20px;
             margin-right: -20px;
         }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
     }
 }
 
 .tingle-product {
     .tingle-modal-box {
-        background-color: var(--color-bg);
+        background-color: var(--color-gray);
 
         min-width: 90%;
 
+        @include mq.mq(md) {
+            border-radius: 10px;
+        }
         @include mq.mq(xl) {
-            min-width: 1300px;
+            max-width: 1400px;
+            min-width: initial;
+            width: 90%;
         }
 
         &__content {
             padding: 60px 40px;
+
+            @include mq.mq($until: lg) {
+                padding: 0 20px 40px;
+            }
+
+            @media (max-width: 540px) {
+                padding: 20px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.tingle-software {
+    .tingle-modal-box {
+        background-color: var(--color-gray);
+
+        min-width: 90%;
+
+        @include mq.mq(md) {
+            border-radius: 10px;
+        }
+        @include mq.mq(xl) {
+            max-width: 953px;
+            min-width: initial;
+            width: 90%;
+        }
+
+        &__content {
+            padding: 60px 40px;
+
+            @include mq.mq($until: lg) {
+                padding: 40px 20px;
+            }
 
             @media (max-width: 540px) {
                 padding: 20px;
