@@ -12,6 +12,7 @@ textarea {
 
     width: 100%;
 
+    .js-validity &:invalid,
     &:user-invalid {
         border-color: var(--color-red);
     }

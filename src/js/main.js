@@ -164,15 +164,26 @@ document.querySelectorAll('.js-product').forEach((el) => {
     })
 })
 
-document.querySelector('#form-callback form').addEventListener('submit', async (event) => {
+document.querySelector('#form-callback form').addEventListener('submit', (event) => {
     event.preventDefault()
+})
 
-    const form = event.currentTarget
+window.onSubmit = async function (token) 
+{
+    const form = document.querySelector('#form-callback form')
+    if (!form.checkValidity()) {
+        form.classList.add('js-validity')
+        grecaptcha.reset()
+        return
+    }
+
     const formData = new FormData(form)
 
     formData.set('question', (formData.get('question') ? formData.get('question') + "\n\n" : '') + "КУПИ КАССУ")
     formData.set('product', productSelected)
+    formData.set('g-recaptcha-response', token)
     formData.set('clientid', Cookies.get('_ym_uid') || '')
+    formData.set('back_url', window.location.href)
 
     let response = await fetch('/bitrix/services/main/ajax.php?mode=ajax&c=atol:form.landing&action=submit', {
         method: 'POST',
@@ -186,8 +197,9 @@ document.querySelector('#form-callback form').addEventListener('submit', async (
 
     if ('error' == result.status) {
         document.querySelector('#form-callback .js-form-error').classList.remove('hide')
+        grecaptcha.reset()
     } else {
         form.classList.add('hide')
         document.querySelector('#form-callback .js-form-success').classList.remove('hide')
     }
-})
+}
