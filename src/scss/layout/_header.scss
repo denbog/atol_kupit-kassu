@@ -13,11 +13,31 @@ body > header {
         animation: slideup .5s;
 
         .container {
-            background-color: rgba($color: #13141C, $alpha: 0.9);
-            border-bottom-right-radius: var(--border-radius-big);
+            background-color: rgba($color: #fff, $alpha: 0.9);
 
             padding-top: 12px;
             padding-bottom: 12px;
+
+            a {
+                color: var(--color-black);
+            }
+        }
+    }
+}
+
+.header {
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+
+        @include mq.mq($until: sm) {
+            gap: 1rem;
+
+            a {
+                flex-basis: 100%;
+            }
         }
     }
 }

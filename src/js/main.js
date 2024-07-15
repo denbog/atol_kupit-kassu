@@ -61,6 +61,12 @@ autoCompleteJS.input.addEventListener('selection', function (event) {
     document.querySelector('input[name="place"]').value = selection.data.region_with_type || ''
 })
 
+/*const header = document.querySelector('header')
+
+document.addEventListener("scroll", (event) => {
+    header.classList.toggle('is-fixed', window.scrollY > 300)
+})*/
+
 let formModal
 let productModal
 let productSelected = ''
