@@ -26,6 +26,13 @@
         flex-direction: column;
     }
 
+    &__old-price {
+        display: block;
+        color: var(--color-white-600);
+        text-decoration: line-through;
+        font-size: 0.875em;
+    }
+
     &__buy {
         @include mq.mq(md) {
             display: grid;
