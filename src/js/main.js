@@ -72,7 +72,7 @@ let productModal
 let productSelected = ''
 
 
-const openForm = () => {
+const openForm = (type = 'default') => {
     if (!formModal) {
         formModal = new tingle.modal({
             closeMethods: ['overlay', 'button', 'escape'],
@@ -88,6 +88,10 @@ const openForm = () => {
     if (productModal) {
         productModal.close()
     }
+    
+    document.querySelectorAll('#form-callback [data-type]').forEach((item) => {
+        item.classList.toggle('hide', type !== item.getAttribute('data-type'))
+    })
 
     formModal.open()
 }
@@ -122,7 +126,7 @@ const live = function (selector, eventType, callback, context) {
 live('.js-open-form', 'click', (event) => {
     event.preventDefault()
 
-    openForm()
+    openForm(event.target.getAttribute('data-type') || 'default')
 })
 
 document.querySelectorAll('.js-buy-set').forEach((el) => {
